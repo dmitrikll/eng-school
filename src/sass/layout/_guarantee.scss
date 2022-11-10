@@ -1,0 +1,123 @@
+.guarantee {
+    // секція
+    background-color: var(--white-color);
+}
+
+.guarantee__backside {
+    // задній фон
+    padding: 0;
+    
+}
+
+.guarantee__title {
+    // заголовок
+    padding: 0;
+    margin-right: auto;
+    margin-bottom: 40px;
+    margin-left: auto;
+    max-width: 300px;
+    text-align: center;
+
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 1.30;
+    letter-spacing: 0.03em;
+    color: var(--primary-text-color);
+
+    @media screen and (min-width: 1680px) {
+        max-width: 800px;
+        
+        font-size: 46px;
+        text-shadow: 0px 2px 5px #494747bc;
+        
+    }
+
+}
+
+.guarantee__frontside {
+    // передній фон
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+
+    background-color: var(--secondary-background-color);
+
+    @media screen and (min-width: 768px) {
+        padding-left: 86px;
+        padding-right: 58px;
+    }
+
+    @media screen and (min-width: 1680px) {
+        padding-top: 60px;
+        padding-right: 280px;
+        padding-bottom: 60px;
+        padding-left: 280px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}
+
+// .guarantee__list {
+//     // список
+// }
+
+
+.guarantee__list-item {
+    // пункт списку;
+    padding-bottom: 24px;
+    border-left: 1px dashed #B9B9B9;
+    position: relative;
+    padding-left: 20px;
+    margin-left: 0px;
+    
+        &:last-child {
+            border: 0px;
+            padding-bottom: 0;
+        }
+    
+        &:before {
+            content: '';
+            width: 14px;
+            height: 20px;
+            background-image: url(../images/icon-campfire.svg);
+            background-size: contain;
+            position: absolute;
+            left: -6px;
+            top: 0px;
+        }
+    
+        @media screen and (min-width: 1680px) {
+            padding-bottom: 20px;
+            padding-left: 40px;
+
+            &::before {
+                width: 22px;
+                height: 30px;
+                left: -10px;
+            }
+        }
+
+}
+
+
+.guarantee__list-description {
+    // текст пункта
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.67;
+    letter-spacing: 0.08em;
+    color: #3D3D3D;
+
+    @media screen and (min-width: 1680px) {
+        font-size: 20px;
+        line-height: 1.4;
+        
+    }
+}
+
+
+.guarantee__list-description-primary {
+    // особливий текст пункту
+    color: var(--brand-color);
+}

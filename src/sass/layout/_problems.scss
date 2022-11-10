@@ -1,0 +1,131 @@
+.section.problems {
+  padding-top: 24px;
+  background-image: linear-gradient(0deg, var(--white-color) 0% 23%, var(--black-color) 23% 77%);
+}
+
+.problems__title {
+  margin-bottom: 24px;
+  font-style: normal;
+  @include font(800, 24px, 31px, 0.03em);
+  color: var(--white-color);
+
+  &.color {
+    color: var(--brand-color);
+  }
+}
+
+.problems__list-box {
+  padding: 20px 32px;
+  background-color: var(--white-color);
+  box-shadow: -5px 8px 26px 0px rgba(0, 0, 0, 0.04);
+  z-index: 2;
+}
+
+.problems__list {
+  display: flex;
+  flex-wrap: wrap;
+  counter-reset: count;
+}
+
+.problems__item {
+  position: relative;
+  margin-bottom: 16px;
+  counter-increment: count ;
+  @include font(700, 14px, 20px, 0.08em);
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+
+  &::before {
+    content: counter(count, decimal-leading-zero);
+    @include font(700, 14px, 17px, 0.08em);
+    color: var(--brand-color);
+    position: absolute;
+    top: 6px;
+    left: 28px;
+  }
+}
+
+.problems__item-dash {
+  @include font(700, 20px, 24px, 0.08em);
+  color: var(--brand-color);
+  margin-bottom: 5px;
+}
+
+// ====768+ =====
+@media screen and (min-width: 768px) {
+ 
+
+  .problems__list-box {
+    padding: 32px 80px;
+  }
+
+  .problems__item {
+    width: 216px;
+    height: auto;
+    margin-bottom: 24px;
+    margin-right: 40px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0px;
+    }
+  }
+
+  .problems__item-dash {
+    margin-bottom: 4px;
+  }
+}
+
+// ====1680+ =====
+@media screen and (min-width: 1680px) {
+  .section.problems {
+    padding-top: 80px;
+  }
+
+  .container.problem {
+    background-image: url(../images/fire-problems.svg);
+    background-repeat: no-repeat;
+    background-position: 1243px 19px;
+  }
+
+  .problems__title {
+    width: 866px;
+    margin-bottom: 80px;
+    @include font(800, 46px, 60px, 0.03em);
+  }
+
+  .problems__list-box {
+    padding: 60px 140px;
+  }
+
+  .problems__item {
+    width: 336px;
+    height: auto;
+    margin-bottom: 24px;
+    margin-right: 164px;
+    @include font(700, 20px, 24px, 0.08em);
+   
+    &:nth-child(2n) {
+      margin-right: 164px;
+    }
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    &:nth-last-child(-n + 3) {
+      margin-bottom: 0px;
+    }
+    &::before {
+      @include font(700, 20px, 33px, 0.08em);
+      top: -3px;
+      left: 28px;
+    }
+  }
+
+  .problems__item-dash {
+    margin-bottom: 8px;
+  }
+}

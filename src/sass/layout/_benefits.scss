@@ -1,0 +1,170 @@
+.benefits {
+    // секція
+    margin-left: 0;
+    margin-right: 0;
+
+    @media screen and (min-width: 480px) and (max-width: 767px){
+        background-image: linear-gradient(to bottom,
+            var(--background-color) 60%,
+            var(--white-color) 60%,
+            var(--white-color) 40%);
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1679px) {
+        background-image: linear-gradient(to bottom,
+            var(--background-color) 40%,
+            var(--white-color) 40%,
+            var(--white-color) 60%);
+        
+    }
+
+    @media screen and (min-width: 1680px) {
+        padding-top: 0px;
+        background-color: var (--secondary-background-color);
+    }
+
+    counter-reset: count-benefits;
+}
+
+.benefits__backside {
+    // задній дів
+    padding-right: 20px;
+    padding-left: 20px;
+
+    @media screen and (min-width: 768px) {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+
+    @media screen and (min-width: 1680px) {
+        position: relative;
+
+        padding-right: 0px;
+        padding-left: 0px;
+        height: 150px;
+
+    }
+}
+
+.benefits__title {
+    // заголовок
+    padding: 0;
+    margin-right: auto;
+    margin-bottom: 30px;
+    max-width: 180px;
+
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1.36;
+    letter-spacing: 0.03em;
+    color: var(--white-color);
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 40px;
+        margin-left: auto;
+        max-width: 100%;
+        
+        text-align: center;
+        font-size: 26px;
+        line-height: 1.30;
+    }
+
+    @media screen and (min-width: 1680px) {
+        display: none;
+    }
+}
+
+.benefits__frontside {
+    // передній дів
+    padding-top: 26px;
+    padding-right: 20px;
+    padding-bottom: 26px;
+    padding-left: 20px;
+
+    background-color: var(--white-color);
+    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+
+    @media screen and (min-width: 768px) {
+        padding-top: 40px;
+        padding-right: 92px;
+        padding-bottom: 40px;
+        padding-left: 92px;
+    }
+    @media screen and (min-width: 1680px) {
+        position: absolute;
+        z-index: 1;
+        top: -200px;
+        left: 16px;
+
+        width: 1648px;
+    }
+}
+
+.benefits__list {
+    // список
+    display: grid;
+        grid-template-columns: auto;
+        gap: 40px 40px;
+        align-items: stretch;
+    
+        @media screen and (min-width: 480px) {
+            grid-template-columns: auto;
+        }
+    
+        @media screen and (min-width: 768px) {
+            grid-template-columns: auto auto;
+        }
+    
+        @media screen and (min-width: 1680px) {
+            grid-template-columns: auto auto auto;
+        }
+}
+
+// .benefits__list-item {
+//     // значення списку
+// }
+
+.benefits__list-count {
+    // лічильник списку
+    margin-right: auto;
+    margin-bottom: 8px;
+    max-width: 236px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.65;
+    letter-spacing: 0.08em;
+    color: var(--brand-color);
+
+    &::after {
+        counter-increment: count-benefits;
+        content: counter(count-benefits, decimal-leading-zero);
+    }
+
+    @media screen and (min-width: 1680px) {
+        font-size: 20px;
+    }
+}
+
+.benefits__list-description {
+    // контейнер описания списка
+    margin-right: auto;
+    max-width: 236px;
+
+    @media screen and (min-width: 1680px) {
+            max-width: 356px;
+        }
+}
+
+.benefits__list-description-text {
+    // текст списка
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.42;
+    letter-spacing: 0.08em;
+    color: var(--primary-text-color);
+
+    @media screen and (min-width: 1680px) {
+        font-size: 20px;
+    }
+}
